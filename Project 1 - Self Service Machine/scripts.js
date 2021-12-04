@@ -61,6 +61,22 @@ var products = [
         "price": 1.49,
         "active": false,
         "quantity": 1
+    },
+    {
+        "photo": "img/water.png",
+        "name": "Água com gás",
+        "price": 2,
+        "active": false,
+        "quantity": 1
     }
 ];
- 
+
+const SelfServiceMachine = {
+    data() {
+        return {
+            products: window.products
+        }
+    }
+};
+
+Vue.createApp(SelfServiceMachine).mount('#app');
