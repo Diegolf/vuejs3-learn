@@ -76,6 +76,11 @@ const SelfServiceMachine = {
         return {
             products: window.products
         }
+    },
+    methods: {
+        calculateTotal: function () {
+            return this.products.reduce((total, product) => product.active ? total += (product.price * product.quantity) : total, 0).toFixed(2);
+        }
     }
 };
 
